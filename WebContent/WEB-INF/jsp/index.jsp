@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@page import="com.pojo.*"%>
+<%@page import="java.util.List"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,9 +18,10 @@
 	}
 </style>
 </head>
+
 <body>
 <%
-	User user = ((User)request.getAttribute("var"));
+	List<User> userList = ((List<User>)request.getAttribute("var"));
 %>
  
 	<table class="table">
@@ -29,19 +31,15 @@
 			<td style="width: 200px">学校</td>
 			<td>年龄</td>
 		</tr>
-<%if(user!=null){%>
+<%for(int i=0;i<userList.size();i++){%>
 		<tr class="td">
-			<td><%=user.getId()%></td>
-			<td><%=user.getName()%></td>
-			<td><%=user.getSchool()%></td>
-			<td><%=user.getAge()%></td>
+			<td><%=userList.get(i).getId()%></td>
+			<td><%=userList.get(i).getName()%></td>
+			<td><%=userList.get(i).getSchool()%></td>
+			<td><%=userList.get(i).getAge()%></td>
 		</tr>
-	<%}else{ %>
-		<tr class="td">
-			<td style="color: red;">暂无相关数据</td>
-		</tr>
-<%} %>
+	<%}%>
 	</table>
- 
 </body>
+
 </html>

@@ -1,6 +1,8 @@
 
 package com.controller;
  
+import java.util.List;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
@@ -30,6 +32,21 @@ public class UserController {
 			mv.addObject("var", var);
 		} catch(Exception e){
             e.printStackTrace();
+		}
+		return mv;
+	}
+	
+	@RequestMapping(value="/queryBySchool")
+	public ModelAndView queryBySchool(HttpServletRequest request)
+	{
+		ModelAndView mv = new ModelAndView();
+		String school = request.getParameter("school");
+		try {
+			List<User> var = userService.findBySchool(school);
+			mv.setViewName("index");
+			mv.addObject("var",var);
+		}catch (Exception e) {
+			e.printStackTrace();
 		}
 		return mv;
 	}

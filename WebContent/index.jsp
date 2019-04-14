@@ -11,9 +11,16 @@
 <title>查询用户</title>
 </head>
 <body>
+	<!--
 	<form action="user/queryById.do" method="post">
 		输入要查询的学号:	<input type="text" name="id" value="123456"/>
 		<button type="submit">提交</button>
 	</form>
+	-->
+	<form action="user/queryBySchool.do" method="post">
+		输入要查询的学校:	<input type="text" name="school" value="华南农业大学"/>
+		<button type="submit">提交</button>
+	</form>
+	
 </body>
 </html>
