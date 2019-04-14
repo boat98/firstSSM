@@ -3,15 +3,11 @@ package com.pojo;
 public class User {
     private String id;
 
-    private String username;
+    private String name;
 
-    private String password;
-
-    private String company;
+    private String school;
 
     private Integer age;
-
-    private Integer sex;
 
     public String getId() {
         return id;
@@ -21,28 +17,20 @@ public class User {
         this.id = id == null ? null : id.trim();
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
     }
 
-    public String getPassword() {
-        return password;
+    public String getSchool() {
+        return school;
     }
 
-    public void setPassword(String password) {
-        this.password = password == null ? null : password.trim();
-    }
-
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
-        this.company = company == null ? null : company.trim();
+    public void setSchool(String school) {
+        this.school = school == null ? null : school.trim();
     }
 
     public Integer getAge() {
@@ -51,13 +39,5 @@ public class User {
 
     public void setAge(Integer age) {
         this.age = age;
-    }
-
-    public Integer getSex() {
-        return sex;
-    }
-
-    public void setSex(Integer sex) {
-        this.sex = sex;
     }
 }

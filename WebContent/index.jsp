@@ -12,7 +12,7 @@
 </head>
 <body>
 	<form action="user/queryById.do" method="post">
-		输入要查询的id:	<input type="text" name="id" value="123456"/>
+		输入要查询的学号:	<input type="text" name="id" value="123456"/>
 		<button type="submit">提交</button>
 	</form>
 </body>

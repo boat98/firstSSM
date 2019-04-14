@@ -25,20 +25,16 @@
 	<table class="table">
 		<tr class="td">
 			<td>ID</td>
-			<td>用户名</td>
-			<td>密码</td>
-			<td style="width: 200px">公司</td>
+			<td>姓名</td>
+			<td style="width: 200px">学校</td>
 			<td>年龄</td>
-			<td>性别</td>
 		</tr>
 <%if(user!=null){%>
 		<tr class="td">
 			<td><%=user.getId()%></td>
-			<td><%=user.getUsername()%></td>
-			<td><%=user.getPassword()%></td>
-			<td><%=user.getCompany()%></td>
+			<td><%=user.getName()%></td>
+			<td><%=user.getSchool()%></td>
 			<td><%=user.getAge()%></td>
-			<td><%=user.getSex()==1?"男":"女"%></td>
 		</tr>
 	<%}else{ %>
 		<tr class="td">
